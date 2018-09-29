@@ -45,12 +45,11 @@ namespace kalculrator3
             {
                 connecttoDB.Open();
 
-                Console.WriteLine(connecttoDB.State);
                 string sql = $"INSERT INTO FoodList (ITEM, UNIT, CALORIES, CARB, PROTEIN, FAT) VALUE ('{this.Name}', {this.Unit}, {this.Calories}, {this.Carb}, {this.Protein}, {this.Fat});";
                 MySqlCommand cmd = new MySqlCommand(sql, connecttoDB);
                 cmd.ExecuteNonQuery();
 
-                Console.WriteLine("The data has been stored");
+                Console.WriteLine("The data has been stored!");
             }
         }
     }
